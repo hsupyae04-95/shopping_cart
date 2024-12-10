@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body.showCart .cartTab{
+    inset: 0 0 0 auto;
+}
+body.showCart .container{
+    transform: translateX(-230px);
+}
+
+.container{
+    width: 900px;
+    max-width: 900vh;
+    margin: auto;
+    text-align: center;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: rgb(242, 243, 244);
+    margin-bottom: 40px;
+}
+
+header .icon-cart {
+    position: relative;
+}
+
+header .icon-cart span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    right: -15px;
+}
+
+.img {
+    background-color: lightblue;
+}
+
+.listProduct .item img {
+    width: 200px;
+    height: 200px;
+}
+
+.listProduct {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.listProduct .item {
+    border-radius: 10px;
+    border: 1px solid;
+    padding: 20px;
+}
+
+.listProduct .item h2 {
+    font-weight: 500;
+    font-size: large;
+}
+.listProduct .item .price {
+    letter-spacing: 5px;
+}
+.listProduct .item .addCart {
+    background-color: gray;
+    border: none;
+    border-radius: 10px;
+    padding: 8px 15px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.cartTab {
+    width: 400px;
+    background-color: rgb(251, 249, 249);
+    color: rgb(18, 17, 17);
+    position: fixed;
+    inset: 0 -400px 0 auto;
+    display: grid;
+    grid-template-rows: 70px 1fr 70px;
+}
+
+.cartTab h1 {
+    padding: 20px;
+    margin: 0;
+    font-weight: 300;
+}
+.cartTab .btn{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.cartTab .btn button{
+    background-color: yellow;
+    border: none;
+    font-family: Poppins;
+    font-weight: 500;
+    cursor: pointer;
+}
+.cartTab .btn .close{
+    background-color: white;
+}
+.cartTab .listCart .item img{
+    width: 100%;
+}
+
+.cartTab .listCart .item {
+    display: grid;
+    grid-template-columns: 50px 150px 80px 1fr;
+    gap: 10px;
+    text-align: center;
+    align-items: center;
+}
+
+.cartTab .quantity span{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-color: rgb(217, 213, 213);
+    border-radius: 25px;
+    cursor: pointer;
+}
+.cartTab .quantity span:nth-child(2){
+    background-color: rgb(251, 249, 249);
+}
+.cartTab .item:nth-child(even){
+    background-color: aliceblue;
+}
+
+@media screen and (max-width: 992px) {
+    .listProduct {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
